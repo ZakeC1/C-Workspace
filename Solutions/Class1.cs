@@ -37,6 +37,21 @@ public class Class1
     }
 
     //Summation of multiples of 3 or 5 under a given value. If the number is a multiple of both 3 and 5, only count it once.
+    public static int Solution(int value)
+    {
+        int i = 1;
+        int summ = 0;
+        while (3 * i < value)
+        {
+            summ += i * 3;
+            if ((5 * i < value) && ((5 * i) % 3 != 0))
+            {
+                summ += i * 5;
+            }
+            i++;
+        }
 
+        return summ;
+    }
 
 }
